@@ -15,7 +15,7 @@ sorted-list
 **SLNextItem** and **SLGetItem**both have O(1) for running time and memory. They simply return the data from a given node/iterate a pointer.
 
 
-Other Notes:
+**Other Notes**:
 
 The “ghost” flag (Halloween season baby) in the Node struct refers to whether a Node has been removed from the list, but shouldn’t be freed from memory due to existing references. (Hence the output “A Node has been ghosted”).
 
