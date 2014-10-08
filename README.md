@@ -1,9 +1,8 @@
 sorted-list
 ===========
-
 **sorted-list for ambiguous data**
 
-Big-O Analysis:
+**Big-O Analysis**:
 
 **SLCreate**, **SLCreateIterator**, **SLDestroyIterator** all have O(1) for memory and runtime. They are simply “constructors” as they would be referred to in OOL’s, and generate space for a given struct.
 
