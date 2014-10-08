@@ -12,7 +12,7 @@ sorted-list
 
 **SLRemove** has O(n) running time worst case. (If the target data is at the end of the list). O(1) memory.
 
-**SLNextItem** and **SLGetItem**both have O(1) for running time and memory. They simply return the data from a given node/iterate a pointer.
+**SLNextItem** and **SLGetItem** both have O(1) for running time and memory. They simply return the data from a given node/iterate a pointer.
 
 
 **Other Notes**:
