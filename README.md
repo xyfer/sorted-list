@@ -1,6 +1,5 @@
 sorted-list
 ===========
-**sorted-list for ambiguous data**
 
 **Big-O Analysis**:
 
