@@ -84,6 +84,14 @@ int main()
     printf(" %d \n", *(int*)SLNextItem(iter));
     printf(" %d \n \n \n", *(int*)SLNextItem(iter));
 
+    ///////////////* TEST CASE 1 *///////////////
+
+    printf("TESTCASE 1.5 \n \n \n");
+
+    SLInsert(intList, &a);                            // duplicate data insertion test
+
+    printf("\n \n");
+
 
 
 
@@ -195,7 +203,7 @@ int main()
 
     printf(" %s \n", SLNextItem(striter3));
     printf(" %s \n", SLNextItem(striter3));  
-    printf(" %s \n \n", SLNextItem(striter3)); 
+    printf(" %s \n", SLNextItem(striter3)); 
     SLNextItem(striter3);                            // try to iterate to deleted node
 
 

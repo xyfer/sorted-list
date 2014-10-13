@@ -1,0 +1,97 @@
+TESTCASES FOR PA2
+
+///////* All test case locations are commented in main.c *///////
+
+TESTCASE 1
+
+Input: 3,7,12,1,8              // regular list insertion of integers
+
+Expected Output: 12,8,7,3,1
+
+Output: 12,8,7,3,1
+
+
+
+TESTCASE 1.5           // duplicate data insertion 
+
+List/Input: 3,7,12,1,8
+
+// Insert number 3 in again
+
+Expected output: Error , duplicate data
+Output: Error, duplicate data   
+
+
+TESTCASE 2
+
+Input: 3,7,12,1,8         //iterate to node "7", remove it from list, then continue iterating to end. No errors should occur (reference count check). 
+Delete 12;		 // A new iterator is then created and starts from head of list, 7 now should be missing from list.
+
+
+Expected Output 1: 12,8,7,3,1
+Expected Output 2: 12,8,3,1
+
+Output 1: 12,8,7,3,1
+Output 2: 12,8,3,1
+
+
+
+TESTCASE 3
+
+Input/Current List: 12,8,3,1   //Now, iterate to Node "8" and then DESTROY the entire list (SLDestroy). Calling SLGetItem or SLNextItem 
+		 	      //should return gracefully without a seg fault.
+
+
+** NOTE** 			I believe SLDestroy should free all list memory regardless of what iterators 
+			        may be active on them, at least that's how I understood the assignment.
+
+
+Expected Output: 12, 8, Error, no node to retrieve from
+Output: 12, 8, Error, no node to retrieve from
+
+
+
+TESTCASE 4             // String sorting
+
+Input: 
+
+    char * str1 = "apple";
+    char * str2 = "bob";
+    char * str3 = "cake";
+    char * str4 = "fast";
+    char * str5 = "zebra";
+    char * str6 = "moses";
+
+
+Expected Output: zebra, moses, fast, cake, bob, apple                        
+Output: zebra, moses, fast, cake, bob, apple
+
+
+
+TESTCASE 5              // Many iterators and deletions, insertions
+
+Current List/Input: zebra, moses, fast, cake, bob, apple 
+
+New Insertions: killjoy, giant                                 // retrieve zebra, then insert "giant", should iterate to it after moses without problem
+								// once we get to cake, insert killjoy behind it, the next iterator coming through should see it!
+							        // delete bob and apple before the next iterator gets there. Shouldn't iterate to them.
+
+Expected Output 1: zebra,moses,giant,fast,cake,bob,apple							
+Expected Output 2: zebra, moses, killjoy, giant, fast, cake, No next node error (we deleted bob!)   
+
+Actual Output 1: zebra,moses,giant,fast,cake,bob,apple							
+Actual Output 2: zebra, moses, killjoy, giant, fast, cake, No next node error
+
+
+TESTCASE 6  // operations on a doubles list
+
+Input: 5.1, 5.2, 5.3, 5.4, 5.5
+
+Expected Output: 5.5, 5.4, 5.3, 5.2, 5.1
+
+Actual Output: 5.5000, 5.4000, 5.3000, 5.2000, 5.1000
+
+
+
+
+
