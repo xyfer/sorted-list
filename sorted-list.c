@@ -236,7 +236,7 @@ void SLDestroyIterator(SortedListIteratorPtr iter)
 
 SortedListIteratorPtr SLCreateIterator(SortedListPtr list) 
 {
-  SortedListIteratorPtr iter = malloc(sizeof(SortedListIteratorPtr));
+  SortedListIteratorPtr iter = malloc(sizeof(struct SortedListIterator));
   iter->curr = list->head;
   iter->curr->refs++;
   return iter;
